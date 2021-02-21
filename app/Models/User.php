@@ -21,6 +21,7 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+    public $timestamps = false;
     /**
      * The attributes that are mass assignable.
      *
@@ -60,7 +61,7 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    protected $atributes =[
-        'type' => 3,
+    protected $attributes =[
+        'id_user_type' => 3,
     ];
 }

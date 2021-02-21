@@ -14,7 +14,7 @@ class AddForeignKeyToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('id_user_type')->references('id')->on('user_types');
+            $table->foreignId('id_user_type')->references('id')->on('user_types')->default('id_user_type');
         });
     }
 
