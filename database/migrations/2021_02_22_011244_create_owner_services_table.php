@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddForeignKeyToUsers extends Migration
+class CreateOwnerServicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class AddForeignKeyToUsers extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
+        Schema::create('owner_services', function (Blueprint $table) {
+            $table->foreignId('id_ownership')->references('id')->on('ownerships');
+            $table->foreignId('id_service')->references('id')->on('services');
         });
     }
 
@@ -25,8 +26,6 @@ class AddForeignKeyToUsers extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('owner_services');
     }
 }

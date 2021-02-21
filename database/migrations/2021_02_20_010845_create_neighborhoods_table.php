@@ -14,8 +14,11 @@ class CreateNeighborhoodsTable extends Migration
     public function up()
     {
         Schema::create('neighborhoods', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('id')->autoIncrement();
+            $table->string('neighborhood',45)->unique();
+            $table->string('slug');
+
+            $table->foreignId('id_city')->references('id')->on('cities');
         });
     }
 

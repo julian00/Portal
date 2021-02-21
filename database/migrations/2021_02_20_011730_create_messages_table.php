@@ -14,8 +14,13 @@ class CreateMessagesTable extends Migration
     public function up()
     {
         Schema::create('messages', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedBigInteger('id')->autoIncrement();
+            //mensajer enviados entre usuarios, (un chat)
+            $table->text('message');
             $table->timestamps();
+            
+            $table->foreignId('id_user_send')->references('id')->on('users');
+            $table->foreignId('id_user_receive')->references('id')->on('users');
         });
     }
 

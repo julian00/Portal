@@ -14,8 +14,12 @@ class CreateNotificationsTable extends Migration
     public function up()
     {
         Schema::create('notifications', function (Blueprint $table) {
-            $table->id();
+            //el mensaje dice si la propiedad cambio el valor, se vendio, etc
+            $table->text('message');
             $table->timestamps();
+            
+            $table->foreignId('id_user')->references('id')->on('users');
+            $table->foreignId('id_ownership')->references('id')->on('ownerships');
         });
     }
 
