@@ -18,8 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('/provinces', ProvinceController::class);
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-//Route::resource('/province', [ProvinceController::class]);
