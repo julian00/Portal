@@ -2,6 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
 button
 {
     @apply text-white;
@@ -54,4 +55,23 @@ button:focus
 .form-control:focus
 {
     @apply bg-white;
+}
+
+h1
+{
+    @apply text-5xl;
+}
+
+td
+{
+    @apply border;
+    @apply px-4;
+    @apply py-2;
+}
+
+th
+{
+    @apply border;
+    @apply px-4;
+    @apply py-2;
 }

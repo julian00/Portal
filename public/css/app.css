@@ -32718,6 +32718,97 @@ select {
           animation: bounce 1s infinite;
 }
 
+button
+{
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  font-weight: 700;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 9999px;
+}
+
+button:focus
+{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-add
+{
+  --tw-bg-opacity: 1;
+  background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
+}
+
+.button-add:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+}
+
+.button-edit
+{
+  --tw-bg-opacity: 1;
+  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+}
+
+.button-edit:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
+}
+
+.button-delete
+{
+  --tw-bg-opacity: 1;
+  background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+}
+
+.button-delete:hover
+{
+  --tw-bg-opacity: 1;
+  background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+}
+
+.form-control
+{
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+}
+
+.form-control:focus
+{
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+h1
+{
+  font-size: 3rem;
+  line-height: 1;
+}
+
+td
+{
+  border-width: 1px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+th
+{
+  border-width: 1px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

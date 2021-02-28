@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProvinceController;
+use App\Http\Livewire\Province\IndexComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,8 @@ Route::get('/', function () {
 });
 
 Route::resource('/provinces', ProvinceController::class);
+
+//Route::get('/provinces', IndexComponent::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

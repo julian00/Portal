@@ -13,6 +13,7 @@ class IndexComponent extends Component
     {
         return view('livewire.province.index-component');
     }
+    
 
 
     public function incrementar()
