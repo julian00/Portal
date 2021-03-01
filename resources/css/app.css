@@ -60,8 +60,9 @@ button:focus
 h1
 {
     @apply text-5xl;
+    @apply m-4;
 }
-
+/*
 td
 {
     @apply border;
@@ -75,3 +76,4 @@ th
     @apply px-4;
     @apply py-2;
 }
+*/

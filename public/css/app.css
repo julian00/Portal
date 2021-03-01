@@ -32789,25 +32789,24 @@ h1
 {
   font-size: 3rem;
   line-height: 1;
+  margin: 1rem;
 }
 
+/*
 td
 {
-  border-width: 1px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+    @apply border;
+    @apply px-4;
+    @apply py-2;
 }
 
 th
 {
-  border-width: 1px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+    @apply border;
+    @apply px-4;
+    @apply py-2;
 }
+*/
 
 @media (min-width: 640px) {
   .sm\:container {
@@ -192273,4 +192272,3 @@ th
             animation: bounce 1s infinite;
   }
 }
-
