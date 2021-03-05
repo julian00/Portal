@@ -20,10 +20,14 @@
                 <tr class="border px-4 py-2">
                     <td class="border px-4 py-2">{{ $province->province }}</td>
                     <td class="px-4 py-2">
-                        <button class="button-edit">Editar</button>
+                        <a href="{{route('provinces.edit',$province)}}" class="button-edit">Editar</a>
                     </td>
                     <td class="px-4 py-2">
-                        <button class="button-delete">Eliminar</button>
+                        <form action="{{ route('provinces.destroy', $province) }}" method="post">
+                            @csrf
+                            @method('delete')
+                            <button class="button-delete" type="submit">Eliminar</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach

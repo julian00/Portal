@@ -18,6 +18,11 @@ class ProvinceController extends Controller
         return view('provinces.create');
     }
 
+    public function edit(Province $province)
+    {
+        return view('provinces.edit', compact('province'));
+    }
+
     public function store()//StoreProvince $request)
     {
         $province=province::create(request()->all());

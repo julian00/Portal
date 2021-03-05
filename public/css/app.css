@@ -32718,6 +32718,20 @@ select {
           animation: bounce 1s infinite;
 }
 
+a
+{
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  font-weight: 700;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 button
 {
   --tw-text-opacity: 1;
