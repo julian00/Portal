@@ -26,7 +26,7 @@ class ProvinceController extends Controller
     public function store()//StoreProvince $request)
     {
         $province=province::create(request()->all());
-        return redirect() -> route('provinces.index');
+        return Redirect() -> route('provinces.index');
     }
     public function update(Request $request, Province $province)
     {
@@ -36,12 +36,12 @@ class ProvinceController extends Controller
         ]);*/
 
         $province->update($request->all());
-        return redirect() ->route('provinces.index');
+        return Redirect() ->route('provinces.index');
     }
 
     public function destroy(Province $province)
     {
         $province->delete();
-        return redirect()->route('provinces.index');
+        return Redirect()->route('provinces.index');
     }
 }

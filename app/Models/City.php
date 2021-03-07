@@ -10,4 +10,9 @@ class City extends Model
     use HasFactory;
     public $timestamps=false;
     protected $fillable=['city','id_province'];
+
+    public function province()
+    {
+        return $this->belongsTo('App\Models\User','id_province','id');
+    }
 }

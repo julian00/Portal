@@ -10,4 +10,9 @@ class Province extends Model
     use HasFactory;
     public $timestamps=false;
     protected $fillable=['province'];
+
+    public function cities()
+    {
+        return $this->hasMany('App\Models\Province','id_province','id');
+    }
 }

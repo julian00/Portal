@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Route::resource('/provinces', ProvinceController::class);
 
-Route::resource('/cityes', CityController::class);
+Route::resource('/cities', CityController::class);
 
 //Route::get('/provinces', IndexComponent::class);
 
