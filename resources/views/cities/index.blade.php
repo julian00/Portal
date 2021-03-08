@@ -1,6 +1,7 @@
 <x-app-layout>
     @section('content')
-        <h1>Lista de ciudades</h1>
+        
+        @livewire('cities.index')
     @endsection
 
 </x-app-layout>
