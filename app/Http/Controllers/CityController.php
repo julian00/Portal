@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\City;
+use App\Models\Province;
 use Illuminate\Support\Facades\Redirect;
 
 class CityController extends Controller
@@ -16,7 +17,8 @@ class CityController extends Controller
 
     public function create()
     {
-        return view('cities.create');
+        $provinces = Province::all();
+        return view('cities.create',compact('provinces'));
     }
 
     public function edit(City $city)

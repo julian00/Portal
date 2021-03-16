@@ -17,7 +17,11 @@
                 <div class="m-4">
                     <label class="form-label" for="id_province">
                         Provincia: 
-                            <input type="search" class="form-input" name="id_province" id="id_province">
+                        <select name="id_province" id="id_province">
+                            @foreach ($provinces as $province)
+                                <option value="{{ $province->id }}">{{ $province->province }}</option>
+                            @endforeach
+                        </select>
                     </label>
                 </div>
                 <div class="grid grid-cols-2">
