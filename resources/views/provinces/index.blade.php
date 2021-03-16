@@ -6,7 +6,7 @@
     
     <h1>Lista de provincias</h1>
 
-    <a class="m-5" href="{{ route('provinces.create') }}">Nueva provincia</a>
+    <a class="m-5 bg-green-500" href="{{ route('provinces.create') }}">Agregar provincia</a>
     
     <table class="table-auto bg-white m-4">
         <thead>
