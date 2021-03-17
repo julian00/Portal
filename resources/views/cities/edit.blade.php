@@ -4,16 +4,8 @@
         <div class="bg-white rounded-g shadow overflow-hidden mx-auto max-w-2xl">
             <form action="{{ route('cities.update',$city) }}" method="post">
                 @csrf
-                <div class="m-4">
-                    <label class="form-label" for="province">
-                        Nombre:
-                        <input type="text" class="form-input" name="city" value="{{ old('city')}}" placeholder="Ingrese ciudad">
-                    </label>
-                    @error('city')
-                        <small class="text-red-500 mt-2" >*{{ $message }}</small>
-                    @enderror
-                </div>
-
+                @method('PUT')
+                     
                 <div class="m-4">
                     <label class="form-label" for="id_province">
                         Provincia: 
@@ -24,9 +16,20 @@
                         </select>
                     </label>
                 </div>
+
+                <div class="m-4">
+                    <label class="form-label" for="city">
+                        Nombre:
+                        <input type="text" class="form-input" name="city" value="{{ old('city', $city->city)}}" placeholder="Ingrese ciudad">
+                    </label>
+                    @error('city')
+                        <small class="text-red-500 mt-2" >*{{ $message }}</small>
+                    @enderror
+                </div>
+
                 <div class="grid grid-cols-2">
                     <button class="button-add" type="submit">Guardar</button>
-                    <button class="button-delete">Cancelar</button>
+                    <a class="button-cancel" href="{{ route('cities.index') }}">Cancelar</a>
                 </div>
             </form>
         </div>

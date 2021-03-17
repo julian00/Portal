@@ -23,7 +23,8 @@ class CityController extends Controller
 
     public function edit(City $city)
     {
-        return view('cities.edit',compact('city'));
+        $provinces = Province::all(); 
+        return view('cities.edit',compact('city','provinces'));
     }
 
     public function store()
@@ -41,6 +42,6 @@ class CityController extends Controller
     public function destroy(City $city)
     {
         $city ->delete();
-        return Redirect('cities.index');
+        return Redirect()->route('cities.index');
     }
 }

@@ -8,7 +8,6 @@
                 <div class="m-4">
                     <label class="form-label" for="id_province">
                         Provincia: 
-                        <br>
                         <select name="id_province" id="id_province">
                             @foreach ($provinces as $province)
                                 <option value="{{ $province->id }}">{{ $province->province }}</option>
