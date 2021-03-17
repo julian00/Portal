@@ -1,8 +1,18 @@
 <div>
     <h1>Lista de ciudades</h1>
-    <div>
-        <a class="m-5 bg-green-500" href="{{ route('cities.create') }}">Agregar ciudad</a>
+
+    <a class="button-add rounded-full" href="{{ route('cities.create') }}">Agregar ciudad</a>
+
+    <div class="ml-5 mt-10">
+        <label for="province">Provincia:</label>
+        <select name="province" id="province">
+            @foreach ($provinces as $province)
+                <option value="{{ $province->id }}">{{ $province->province }}</option>
+            @endforeach
+        </select>
     </div>
+
+    
     <div class="m-4">
         <table class="bg-white rounded-lg shadow overflow-hidden mx-auto">
             <thead class="bg-gray-50 border-b border-gray-200">
@@ -16,7 +26,7 @@
                     <tr>
                         <td class="border px-4 py-2">{{ $city->city }}</td>
                         <td class="border px-4 py-2">
-                            <button class="button-edit">Editar</button>
+                            <button class="button-edit" onclick="{{ route('cities.create') }}">Editar</button>
                             <button class="button-delete">Eliminar</button>
                         </td>
                     </tr>

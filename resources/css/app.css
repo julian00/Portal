@@ -31,10 +31,23 @@ button:focus
 .button-add
 {
     @apply bg-green-500;
+    @apply m-5;
 }
 
 .button-add:hover{
     @apply bg-green-700;
+}
+
+.button-cancel
+{
+    @apply bg-red-500;
+    @apply m-5;
+    @apply text-center;
+}
+
+.button-cancel:hover
+{
+    @apply bg-red-600;
 }
 
 .button-edit

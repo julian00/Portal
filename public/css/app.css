@@ -32757,11 +32757,26 @@ button:focus
 {
   --tw-bg-opacity: 1;
   background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
+  margin: 1.25rem;
 }
 
 .button-add:hover{
   --tw-bg-opacity: 1;
   background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+}
+
+.button-cancel
+{
+  --tw-bg-opacity: 1;
+  background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+  margin: 1.25rem;
+  text-align: center;
+}
+
+.button-cancel:hover
+{
+  --tw-bg-opacity: 1;
+  background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
 }
 
 .button-edit

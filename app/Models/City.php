@@ -13,6 +13,6 @@ class City extends Model
 
     public function province()
     {
-        return $this->belongsTo('App\Models\User','id_province','id');
+        return $this->belongsTo('App\Models\City','id_province','id');
     }
 }
