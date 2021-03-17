@@ -1,7 +1,7 @@
 <div>
     <h1>Lista de ciudades</h1>
 
-    <a class="button-add rounded-full" href="{{ route('cities.create') }}">Agregar ciudad</a>
+    <a class="button-add" href="{{ route('cities.create') }}">Agregar ciudad</a>
 
     <div class="ml-5 mt-10">
         <label for="province">Provincia:</label>
@@ -14,7 +14,7 @@
 
     
     <div class="m-4">
-        <table class="bg-white rounded-lg shadow overflow-hidden mx-auto">
+        <table>
             <thead class="bg-gray-50 border-b border-gray-200">
                 <tr class="text-xs font-medium text-gray-500 uppercase">
                     <th class="border px-4 py-2">Ciudad</th>
@@ -26,7 +26,7 @@
                     <tr>
                         <td class="border px-4 py-2">{{ $city->city }}</td>
                         <td class="border px-4 py-2">
-                            <button class="button-edit" onclick="{{ route('cities.create') }}">Editar</button>
+                            <a href="{{route('cities.edit',$city)}}" class="button-edit">Editar</a>
                             <button class="button-delete">Eliminar</button>
                         </td>
                     </tr>

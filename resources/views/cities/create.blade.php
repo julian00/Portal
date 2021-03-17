@@ -29,7 +29,7 @@
 
                 <div class="grid grid-cols-2">
                     <button class="button-add" type="submit">Guardar</button>
-                    <a class="button-cancel rounded-full" href="{{ route('cities.index') }}">Cancelar</a>
+                    <a class="button-cancel" href="{{ route('cities.index') }}">Cancelar</a>
                 </div>
             </form>
         </div>

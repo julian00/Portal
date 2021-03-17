@@ -32758,6 +32758,7 @@ button:focus
   --tw-bg-opacity: 1;
   background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
   margin: 1.25rem;
+  border-radius: 9999px;
 }
 
 .button-add:hover{
@@ -32771,23 +32772,13 @@ button:focus
   background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
   margin: 1.25rem;
   text-align: center;
+  border-radius: 9999px;
 }
 
 .button-cancel:hover
 {
   --tw-bg-opacity: 1;
   background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
-}
-
-.button-edit
-{
-  --tw-bg-opacity: 1;
-  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
-}
-
-.button-edit:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
 }
 
 .button-delete
@@ -32800,6 +32791,18 @@ button:focus
 {
   --tw-bg-opacity: 1;
   background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+}
+
+.button-edit
+{
+  --tw-bg-opacity: 1;
+  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+  border-radius: 9999px;
+}
+
+.button-edit:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
 }
 
 .form-label
@@ -32823,13 +32826,6 @@ button:focus
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
 
-h1
-{
-  font-size: 3rem;
-  line-height: 1;
-  margin: 1rem;
-}
-
 .form-input
 {
   display: block;
@@ -32849,6 +32845,25 @@ h1
 {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+h1
+{
+  font-size: 3rem;
+  line-height: 1;
+  margin: 1rem;
+}
+
+table
+{
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  border-radius: 0.5rem;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*

@@ -4,21 +4,24 @@
 
     <h1>Nueva Provincia</h1>
 
-    <form action="{{ route('provinces.store') }}" method="post">
-        @csrf
+    <div class="bg-white rounded-g shadow overflow-hidden mx-auto max-w-2xl">
+        <form action="{{ route('provinces.store') }}" method="post">
+            @csrf
+            <div class="m-4">
+                <label class="form-label" for="province">
+                    Nombre: 
+                    <input type="text" class="form-input" name="province"  placeholder="Igrasar provincia" value="{{ old('province') }}">
+                </label>
+                @error('province')
+                    <small class="text-red-500 mt-2" >*{{ $message }}</small>
+                @enderror
+            </div>
 
-        <label class="m-4">
-            Nombre: 
-            <input type="text" class="border-solid border-1 border-light-blue-500 px-2" name="province" value="{{ old('province') }}">
-        </label>
-        @error('province')
-            <small class="text-red-500 mt-2" >*{{ $message }}</small>
-        @enderror
-
-        <br>
-        <br>
-        <button class="button-add" type="submit">Guardar</button>
-        <button class="button-delete">Cancelar</button>
-    </form>
+            <div class="grid grid-cols-2">
+                <button class="button-add" type="submit">Guardar</button>
+                <a class="button-cancel" href="{{ route('provinces.index') }}">Cancelar</a>
+            </div>
+        </form>
+    </div>
     
 @endsection

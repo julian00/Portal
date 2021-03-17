@@ -32,6 +32,7 @@ button:focus
 {
     @apply bg-green-500;
     @apply m-5;
+    @apply rounded-full;
 }
 
 .button-add:hover{
@@ -43,20 +44,12 @@ button:focus
     @apply bg-red-500;
     @apply m-5;
     @apply text-center;
+    @apply rounded-full;
 }
 
 .button-cancel:hover
 {
     @apply bg-red-600;
-}
-
-.button-edit
-{
-    @apply bg-blue-500;
-}
-
-.button-edit:hover{
-    @apply bg-blue-700;
 }
 
 .button-delete
@@ -67,6 +60,16 @@ button:focus
 .button-delete:hover
 {
     @apply bg-red-600;
+}
+
+.button-edit
+{
+    @apply bg-blue-500;
+    @apply rounded-full;
+}
+
+.button-edit:hover{
+    @apply bg-blue-700;
 }
 
 .form-label
@@ -87,12 +90,6 @@ button:focus
     @apply bg-white;
 }
 
-h1
-{
-    @apply text-5xl;
-    @apply m-4;
-}
-
 .form-input
 {
     @apply block;
@@ -107,6 +104,21 @@ h1
 .form-input:focus
 {
     @apply bg-white;
+}
+
+h1
+{
+    @apply text-5xl;
+    @apply m-4;
+}
+
+table
+{
+    @apply bg-white;
+    @apply rounded-lg;
+    @apply shadow;
+    @apply overflow-hidden;
+    @apply mx-auto;
 }
 /*
 td
