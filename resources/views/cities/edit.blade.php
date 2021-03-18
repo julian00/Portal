@@ -11,7 +11,11 @@
                         Provincia: 
                         <select name="id_province" id="id_province">
                             @foreach ($provinces as $province)
-                                <option value="{{ $province->id }}">{{ $province->province }}</option>
+                                @if ($province->id == $city->id_province)
+                                    <option selected="select" value="{{ $province->id }}">{{ $province->province }}</option>
+                                @else
+                                    <option value="{{ $province->id }}">{{ $province->province }}</option>
+                                @endif
                             @endforeach
                         </select>
                     </label>

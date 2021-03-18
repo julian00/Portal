@@ -17,4 +17,9 @@ class Index extends Component
         //return view('livewire.cities.index');
         return view('livewire.cities.index',compact('cities','provinces'));// ['cities'=>City::all()]);
     }
+    
+    public function destroy(City $city)
+    {
+        $city->delete();
+    }
 }

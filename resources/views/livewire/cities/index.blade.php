@@ -26,17 +26,17 @@
                     <tr class="border px-4 py-2">
                         <td class="border px-4 py-2">{{ $city->city }}</td>
                         <td class="px-4 py-2">
-                            <!--hay que pasarle tambien la lista de provincias-->
                             <a href="{{route('cities.edit',$city)}}" class="button-edit">Editar</a>
+                            <button wire:click="destroy({{ $city }})" class="button-delete" type="submit">Eliminar</button>
                         </td>
-                        <td class="px-4 py-2">
+                        <!--td class="px-4 py-2">
                             <form action="{{ route('cities.destroy', $city) }}" method="post">
-                                @csrf
-                                @method('delete')
-                                <!--borra pero tira error en la redireccion de cities.index-->
+                                @ csrf
+                                @ method('delete')
+                                <!--borra pero tira error en la redireccion de cities.index- ->
                                 <button class="button-delete" type="submit">Eliminar</button>
                             </form>
-                        </td>
+                        </td-->
                     </tr>
                 @endforeach
             </tbody>
