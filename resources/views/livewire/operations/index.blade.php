@@ -22,8 +22,10 @@
                                 <td class="px-6 py-4">
                                     <div class="text-sm text-gray-900">{{ $operation->operation }}</div>
                                 </td>
+
                                 <td class="px-6 py-4 text-right text-sm font-medium">
-                                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Editar</a>
+                                    <a href="#" class="button-edit">Editar</a>
+                                    <button wire:click="destroy({{ $operation }})" class="button-delete" type="submit">Eliminar</button>
                                 </td>
                             </tr>
                         @endforeach
