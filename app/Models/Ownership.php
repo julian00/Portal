@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Ownership extends Model
 {
     use HasFactory;
+    public $timestamps=false;
+    //protected $fillable=['operation'];
 }

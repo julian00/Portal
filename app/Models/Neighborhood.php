@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Neighborhood extends Model
 {
     use HasFactory;
+    public $timestamps=false;
+    //protected $fillable=['operation'];
 }
