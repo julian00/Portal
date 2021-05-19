@@ -2,6 +2,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import 'buttons.css';
+
 a
 {
     @apply text-white;
@@ -65,7 +67,12 @@ button:focus
 .button-edit
 {
     @apply bg-blue-500;
-    @apply rounded-full;
+    @apply font-bold;
+    @apply text-white;
+    @apply py-2;
+    @apply px-4;
+    @apply rounded;
+    @apply cursor-pointer;
 }
 
 .button-edit:hover{
@@ -119,7 +126,12 @@ table
     @apply shadow;
     @apply overflow-hidden;
     @apply mx-auto;
+    
+    @apply min-w-full;
+    @apply divide-y;
+    @apply divide-gray-200;
 }
+
 /*
 td
 {

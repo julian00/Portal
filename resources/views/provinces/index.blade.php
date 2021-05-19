@@ -8,7 +8,7 @@
 
     <a class="button-add" href="{{ route('provinces.create') }}">Agregar provincia</a>
     
-    <table class="m-4">
+    <table class="m-4 class="min-w-full"">
         <thead>
             <tr>
                 <th class="border px-4 py-2">Provincia</th>

@@ -4,14 +4,44 @@ namespace App\Http\Livewire\Operations;
 
 use Livewire\Component;
 use App\Models\Operation;
+use Livewire\WithFileUploads;
 
 class Index extends Component
 {
+    use WithFileUploads;
+
     public $operation;
+
+    public $open_edit = false;
+
+    protected $rule = [
+        'operation.operation' => 'required'
+    ];
+
+    
+
+    public function edit(Operation $operation)
+    {
+        $this->operation = $operation;
+        $this->open_edit = true;
+    }
+
+    public function update()
+    {
+        $this->validate();
+        $this->operation->save();
+        $this->reset(['open_edit']);
+
+        $this->emitTo('operations.index','render');
+    }
 
     //escuchador del evento ['eventoEmitido' => 'metodoAEjecutar']
     protected $listeners = ['render' => 'render'];
 
+    public function destroy(Operation $operation)
+    {
+        $operation->delete();
+    }
 
     public function render()
     {
@@ -19,8 +49,4 @@ class Index extends Component
         return view('livewire.operations.index',compact('operations'));
     }
 
-    public function destroy(Operation $operation)
-    {
-        $operation->delete();
-    }
 }

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Storage;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +14,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        //crear la carpeta para guardar las imagenes
+        //Storage::makeDirectory('products');
+
         $this->call(provinceTableSeeder::class);
         $this->call(cityTableSeeder::class);
         $this->call(neighborhoodTableSeeder::class);
