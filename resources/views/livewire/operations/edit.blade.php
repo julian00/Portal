@@ -1,11 +1,8 @@
 <div>
-    <a class="button-edit">
+    <a class="button-edit" wire:click="$set('open',true)">
         <i class="fas fa-edit"></i>
     </a>
-    {{--<a class="button-edit" wire:click="set('open',true)">
-        <i class="fas fa-edit"></i>
-    </a>
-    <x-jet-dialog-modal wire:modal='open'>
+    <x-jet-dialog-modal wire:model="open">
         <x-slot name='title'>
             EDITAR
         </x-slot>
@@ -18,7 +15,7 @@
         </x-slot>
 
         <x-slot name='footer'>
-            <x-jet-secondary-button wire:click="$set('open',flase)">
+            <x-jet-secondary-button wire:click="$set('open',false)">
                 Cancelar
             </x-jet-secondary-button>
 
@@ -26,5 +23,5 @@
                 Editar
             </x-jet-secondary-button>
         </x-slot>
-    </x-jet-dialog-modal> --}}
+    </x-jet-dialog-modal> 
 </div>
