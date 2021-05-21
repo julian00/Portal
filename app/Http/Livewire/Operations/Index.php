@@ -4,21 +4,18 @@ namespace App\Http\Livewire\Operations;
 
 use Livewire\Component;
 use App\Models\Operation;
-use Livewire\WithFileUploads;
 
 class Index extends Component
 {
-    use WithFileUploads;
-
     public $operation;
 
     public $open_edit = false;
 
-    protected $rule = [
+    
+
+    protected $rules = [
         'operation.operation' => 'required'
     ];
-
-    
 
     public function edit(Operation $operation)
     {

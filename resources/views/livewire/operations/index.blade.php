@@ -18,23 +18,21 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                        @foreach ($operations as $operation)   
+                        @foreach ($operations as $item)   
                             <tr>
                                 <td class="px-6 py-4">
-                                    <div class="text-m text-gray-900">{{ $operation->operation }}</div>
+                                    <div class="text-m text-gray-900">{{ $item->operation }}</div>
                                 </td>
 
                                 <td class=" py-4 text-right text-sm font-medium">
-                                    @livewire('operations.edit', ['operation' => $operation], key($operation->id))
-                                    {{--<a class="btn btn-blue" wire:click="edit({{$operation}}">
+                                    <a class="btn btn-blue" wire:click="edit({{$item}})">
                                         <i class="fas fa-edit"></i>
-                                    </a>--}}
+                                    </a>
                                 </td>
                                 <td class="py-4 text-right text-sm font-medium">
-                                    <a class="btn btn-red space-x-7" wire:click="destroy({{ $operation }})">
+                                    <a class="btn btn-red space-x-7" wire:click="destroy({{ $item }})">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
-                                    {{--<button wire:click="destroy({{ $operation }})" class="button-delete" type="submit">Eliminar</button>--}}
                                 </td>
                             </tr>
                         @endforeach
@@ -47,4 +45,27 @@
             @endif
         </x-table>
     </div>
+
+    <x-jet-dialog-modal wire:model="open_edit">
+        <x-slot name='title'>
+            EDITAR
+        </x-slot>
+
+        <x-slot name='content'>
+            <div class="mb-4">
+                <x-jet-label value="Tipo de operacion"/>
+                <x-jet-input wire:model="operation.operation" type="text" class="w-full" />
+            </div>
+        </x-slot>
+
+        <x-slot name='footer'>
+            <x-jet-secondary-button wire:click="$set('open_edit',false)">
+                Cancelar
+            </x-jet-secondary-button>
+
+            <x-jet-secondary-button class="button-add disabled:opacity-25" wire:click="update" wire:loading.attr="disabled" wire:target="save">
+                Actualizar
+            </x-jet-secondary-button>
+        </x-slot>
+    </x-jet-dialog-modal>
 </div>
