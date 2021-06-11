@@ -5,6 +5,7 @@ use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\CityController;
 use App\Http\Livewire\Province\IndexComponent;
 use App\Http\Controllers\OperationController;
+use App\Http\Controllers\OrientationController;
 use App\Models\Operation;
 
 /*
@@ -26,6 +27,7 @@ Route::resource('/provinces', ProvinceController::class);
 
 Route::resource('/cities', CityController::class);
 Route::resource('/operations', OperationController::class);
+Route::resource('/orientations', OrientationController::class);
 
 //Route::get('/provinces', IndexComponent::class);
 

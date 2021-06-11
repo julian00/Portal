@@ -13,7 +13,7 @@
                                 Operacion
                             </th>
                             <th scope="col" class="w-2 px-6 py-3" colspan="2">
-                                <span class="sr-only">Edit</span>
+                                <span class="sr-only">Editar</span>
                             </th>
                         </tr>
                     </thead>
@@ -29,6 +29,7 @@
                                         <i class="fas fa-edit"></i>
                                     </a>
                                 </td>
+
                                 <td class="py-4 text-right text-sm font-medium">
                                     <a class="btn btn-red space-x-7" wire:click="destroy({{ $item }})">
                                         <i class="fas fa-trash-alt"></i>
@@ -46,6 +47,7 @@
         </x-table>
     </div>
 
+    {{--modal edit--}}
     <x-jet-dialog-modal wire:model="open_edit">
         <x-slot name='title'>
             EDITAR
