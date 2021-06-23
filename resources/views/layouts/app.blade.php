@@ -9,10 +9,10 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-        <link rel="stylesheet" href="{{ asset('vendor/fontawesome/css/all.min.css') }}">
         
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/fontawesome/css/all.min.css') }}">
 
         @livewireStyles
 
@@ -23,7 +23,10 @@
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+            {{--@livewire('navigation-menu')--}}
+
+            <!--navigation nuevo-->
+            @livewire('navigation')
 
             <!-- Page Heading -->
             @if (isset($header))

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -35,7 +35,15 @@
                     @endauth
                 </div>
             @endif
-            <h1>HOME</h1>
+
+            <div class="container bg-gray-700 flex items-center w-full h-16 px-4">
+                @livewire('search')
+                <h1>Inicio</h1>
+            </div>
         </div>
+
     </body>
-</html>
+</html> --}}
+
+<x-app-layout>
+</x-app-layout>
