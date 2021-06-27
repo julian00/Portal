@@ -4,6 +4,21 @@
 
 @import 'buttons.css';
 
+#navigation-menu
+{
+    height: calc(100vh - 4rem);
+}
+
+li a
+{
+    @apply text-gray-500 mx-2 font-normal text-sm flex items-center;
+}
+
+li a:hover
+{
+    @apply bg-blue-600 text-white mx-4 font-bold;
+}
+
 a
 {
     @apply text-white;
@@ -12,17 +27,6 @@ a
     @apply mb-2;
     @apply py-2;
     @apply px-4;
-}
-
-button
-{
-    @apply text-white;
-    @apply font-bold;
-    @apply mx-4;
-    @apply mb-2;
-    @apply py-2;
-    @apply px-4;
-    @apply rounded-full;
 }
 
 button:focus

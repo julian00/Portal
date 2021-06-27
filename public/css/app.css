@@ -32767,6 +32767,35 @@ select {
   background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
 }
 
+#navigation-menu
+{
+  height: calc(100vh - 4rem);
+}
+
+li a
+{
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
+
+li a:hover
+{
+  --tw-bg-opacity: 1;
+  background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+  font-weight: 700;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
 a
 {
   --tw-text-opacity: 1;
@@ -32779,21 +32808,6 @@ a
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-button
-{
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-  font-weight: 700;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 9999px;
 }
 
 button:focus
