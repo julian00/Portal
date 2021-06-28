@@ -32779,8 +32779,9 @@ li a
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 1.5rem;
   --tw-text-opacity: 1;
   color: rgba(107, 114, 128, var(--tw-text-opacity));
 }
@@ -32790,8 +32791,7 @@ li a:hover
   --tw-bg-opacity: 1;
   background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
   font-weight: 700;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  padding-left: 2.5rem;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }

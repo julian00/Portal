@@ -11,12 +11,12 @@
 
 li a
 {
-    @apply text-gray-500 mx-2 font-normal text-sm flex items-center;
+    @apply text-gray-500 mx-0 pl-6 font-normal text-sm flex items-center;
 }
 
 li a:hover
 {
-    @apply bg-blue-600 text-white mx-4 font-bold;
+    @apply bg-blue-600 text-white pl-10 font-bold;
 }
 
 a
@@ -135,19 +135,3 @@ table
     @apply divide-y;
     @apply divide-gray-200;
 }
-
-/*
-td
-{
-    @apply border;
-    @apply px-4;
-    @apply py-2;
-}
-
-th
-{
-    @apply border;
-    @apply px-4;
-    @apply py-2;
-}
-*/

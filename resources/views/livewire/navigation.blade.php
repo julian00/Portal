@@ -1,7 +1,10 @@
-<header class="bg-gray-700 sticky top-0">
+{{-- x-data es una variable de alpine para manejar el menu--}}
+<header class="bg-gray-700 sticky top-0" x-data="{ open: false }">
     {{--<div class="container flex items-center h-16">--}}
-    <div class="container grid grid-cols-12 items-center h-16">
-        <a class="flex flex-col items-center justify-center px-4 bg-white bg-opacity-25 text-white cursor-pointer font-semibold h-full">
+    <div class="container flex items-center h-16">
+        <a :class="{'bg-opacity-100 text-blue-700' : open}"
+            x-on:click="open = !open" {{--cambio la variable open cuando hago click en el menu--}}
+            class="flex flex-col items-center justify-center px-4 mb-0 ml-8 bg-white bg-opacity-25 text-white cursor-pointer font-semibold h-full">
             {{-- menu desplegable --}}
             <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 <path class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -11,17 +14,21 @@
         </a>
 
         {{-- logo  de jetstream ocupa 7 lugares --}}
-        <a href="/" class="mx-6 col-span-8">
+        <a href="/" class="mx-6">
             <x-jet-application-mark class="block h-6 w-auto" />
         </a>
 
         {{--@livewire('search')--}}
-        <div class="grid grid-cols-4 items-center justify-center h-full relative col-span-3" align="right">
+        <div class="flex-1 relative"></div>
             {{--campana de notificaciones--}}
-            @livewire('dropdown-bell')
+            <div class="mx-6 relative">
+                @livewire('dropdown-bell')
+            </div>
 
             {{--logo de mensajes--}}
-            @livewire('dropdown-message')
+            <div class="mx-6 relative">
+                @livewire('dropdown-message')
+            </div>
 
             {{-- menu de usuario --}}
             <div class="mx-3 relative">
@@ -98,11 +105,11 @@
                     </x-jet-dropdown>
                 @endauth
             </div>
-        </div>
+        
     </div>
 
-    <nav id="navigation-menu" class="bg-gray-700 bg-opacity-25 absolute w-full">
-        <div class=" container h-full w-1/6 mx-4">
+    <nav id="navigation-menu" :class="{'block':open, 'hidden': !open}" class="bg-gray-700 bg-opacity-25 absolute w-full hidden">
+        <div x-on:click.away="open = false" class=" container h-full w-1/6 mx-8">
             <ul class="bg-white ">
                 <li>
                     <a href="">Barrios</a>
@@ -126,3 +133,4 @@
         </div>
     </nav>
 </header>
+
