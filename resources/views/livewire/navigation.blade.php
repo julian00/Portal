@@ -115,16 +115,16 @@
                     <a href="">Barrios</a>
                 </li>
                 <li>
-                    <a href="">Ciudades</a>
+                    <a href="{{ route('cities.index') }}">Ciudades</a>
                 </li>
                 <li>
-                    <a href="">Operaciones</a>
+                    <a href="{{ route('operations.index') }}">Operaciones</a>
                 </li>
                 <li>
-                    <a href="">Orientaciones</a>
+                    <a href="{{ route('orientations.index') }}">Orientaciones</a>
                 </li>
                 <li>
-                    <a href="">Provincias</a>
+                    <a href="{{ route('provinces.index') }}">Provincias</a>
                 </li>
                 <li>
                     <a href="">Servicios</a>
