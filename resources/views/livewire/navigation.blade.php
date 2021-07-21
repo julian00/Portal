@@ -1,5 +1,5 @@
 {{-- x-data es una variable de alpine para manejar el menu--}}
-<header class="bg-gray-700 sticky top-0" x-data="{ open: false }">
+<header class="bg-gray-700 sticky top-0 z-50" x-data="{ open: false }">
     {{--<div class="container flex items-center h-16">--}}
     <div class="container flex items-center h-16">
         <a :class="{'bg-opacity-100 text-blue-700' : open}"

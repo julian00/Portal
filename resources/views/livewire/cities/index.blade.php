@@ -1,45 +1,81 @@
 <div>
-    <h1>Lista de ciudades</h1>
-
-    <a class="button-add" href="{{ route('cities.create') }}">Agregar ciudad</a>
-
-    <div class="ml-5 mt-10">
-        <label for="province">Provincia:</label>
-        <select name="province" id="province">
-            @foreach ($provinces as $province)
-                <option value="{{ $province->id }}">{{ $province->province }}</option>
-            @endforeach
-        </select>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"">
+        <x-table>
+            <div class="px-6 py-4 flex items-center">
+                @livewire('cities.create')
+            </div>
+ 
+            {{--muestro los datos--}}
+            @if ($cities->count())
+                <table class="min-w-full">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col" class="relative cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Ciudad
+                            </th>
+                            <th scope="col" class="w-2 px-6 py-3" colspan="2">
+                                <span class="sr-only">Editar</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        @foreach($cities as $item)
+                             <tr>
+                                 <td class="px-6 py-4">
+                                     <div class="text-m text-gray-900">{{ $item->city }}</div>
+                                 </td>
+ 
+                                 <td class=" py-4 text-right text-sm font-medium">
+                                     <a class="btn btn-blue" wire:click="edit({{$item}})">
+                                         <i class="fas fa-edit"></i>
+                                     </a>
+                                 </td>
+                                 
+                                 <td class="py-4 text-right text-sm font-medium">
+                                     <a class="btn btn-red space-x-7" wire:click="destroy({{ $item }})">
+                                         <i class="fas fa-trash-alt"></i>
+                                     </a>
+                                 </td>
+                             </tr>
+                         @endforeach
+                    </tbody>
+                </table>
+            @else
+                <div class="px-6 py-4">
+                    No existe ningun registro coincidente con la busqueda
+                </div>
+            @endif
+        </x-table>
     </div>
+ 
+     {{--modal edit--}} 
+     <x-jet-dialog-modal wire:model="open_edit">
+         <x-slot name='title'>
+             EDITAR
+         </x-slot>
+         
+         <x-slot name='content'>
+             <div class="mb-4">
+                 <x-jet-label value="City"/>
+                 <x-jet-input wire:model="city.city" type="text" class="w-full mb-4" />
+                 <x-jet-label value="Id_province"/>
 
-    
-    <div class="m-4">
-        <table>
-            <thead class="bg-gray-50 border-b border-gray-200">
-                <tr class="text-xs font-medium text-gray-500 uppercase">
-                    <th class="border px-4 py-2">Ciudad</th>
-                    <th class="border px-4 py-2"></th>
-                </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200">
-                @foreach ($cities as $city)
-                    <tr class="border px-4 py-2">
-                        <td class="border px-4 py-2">{{ $city->city }}</td>
-                        <td class="px-4 py-2">
-                            <a href="{{route('cities.edit',$city)}}" class="button-edit">Editar</a>
-                            <button wire:click="destroy({{ $city }})" class="button-delete" type="submit">Eliminar</button>
-                        </td>
-                        <!--td class="px-4 py-2">
-                            <form action="{{ route('cities.destroy', $city) }}" method="post">
-                                @ csrf
-                                @ method('delete')
-                                <!--borra pero tira error en la redireccion de cities.index- ->
-                                <button class="button-delete" type="submit">Eliminar</button>
-                            </form>
-                        </td-->
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </div>
-</div>
+                 <select name="province" id="province">
+                    @foreach ($provinces as $province)
+                        <option value="{{ $province->id }}">{{ $province->province }}</option>
+                    @endforeach
+                </select>
+             </div>
+         </x-slot>
+ 
+         <x-slot name='footer'>
+             <x-jet-secondary-button wire:click="$set('open_edit',false)">
+                 Cancelar
+             </x-jet-secondary-button>
+             <x-jet-secondary-button class="button-add disabled:opacity-25" wire:click="update" wire:loading.attr="disabled" wire:target="save">
+                 Actualizar
+             </x-jet-secondary-button>
+         </x-slot>
+     </x-jet-dialog-modal>
+ </div>
+ 
