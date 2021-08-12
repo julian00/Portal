@@ -4,6 +4,7 @@
             <div class="px-6 py-4 flex items-center">
                 @livewire('operations.create')
             </div>
+            
             {{--muestro los datos--}}
             @if ($operations->count())   
                 <table class="min-w-full">
