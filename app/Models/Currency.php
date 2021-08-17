@@ -9,5 +9,5 @@ class Currency extends Model
 {
     use HasFactory;
     public $timestamps=false;
-    //protected $fillable=['operation'];
+    protected $fillable=['currency','symbol'];
 }

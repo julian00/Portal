@@ -3,9 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\CurrencyController;
 use App\Http\Livewire\Province\IndexComponent;
 use App\Http\Controllers\OperationController;
 use App\Http\Controllers\OrientationController;
+use App\Models\Currency;
 use App\Models\Operation;
 
 /*
@@ -26,6 +28,7 @@ Route::get('/', function () {
 Route::resource('/provinces', ProvinceController::class);
 
 Route::resource('/cities', CityController::class);
+Route::resource('/currencies', CurrencyController::class);
 Route::resource('/operations', OperationController::class);
 Route::resource('/orientations', OrientationController::class);
 
