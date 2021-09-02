@@ -35,7 +35,6 @@ class Index extends Component
             'symbol' => $this->symbol
         ]);
 
-        //$this->object->save();
         $this->reset(['open_edit']);
 
         $this->emitTo('currencies.index','render');
