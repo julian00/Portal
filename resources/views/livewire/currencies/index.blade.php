@@ -64,11 +64,11 @@
         <x-slot name='content'>
             <div class="mb-4">
                 <x-jet-label value="Moneda"/>
-                <x-jet-input wire:model="currencies.currency" type="text" class="w-full" />
+                <x-jet-input wire:model="currency" type="text" class="w-full" />
             </div>
             <div class="mb-4">
                 <x-jet-label value="Simbolo"/>
-                <x-jet-input wire:model="currencies.symbol" type="text" class="w-full" />
+                <x-jet-input wire:model="symbol" type="text" class="w-full" />
             </div>
         </x-slot>
 

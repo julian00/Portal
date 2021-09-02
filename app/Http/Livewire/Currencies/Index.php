@@ -2,32 +2,40 @@
 
 namespace App\Http\Livewire\Currencies;
 
+use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use App\Models\Currency;
 
 class Index extends Component
 {
-    public $currency, $symbol;
+    public $currency, $symbol, $identifier;
 
     public $open_edit =false;
 
     protected $rules = [
-        'currencies.currency' => 'required',
-        'currencies.symbol' => 'requiered|max:3'
+        'currency' => 'required',
+        'symbol' => 'required|max:3'
     ];
 
-    public function edit(Currency $obj)
+    public function edit(Currency $request)
     {
-        $this->currency = $obj->currency;
-        $this->symbol = $obj->symbol;
+        $this->identifier = $request->id;
+        $this->currency = $request->currency;
+        $this->symbol = $request->symbol;
         $this->open_edit = true;
     }
 
     public function update()
     {
         $this->validate();
-        $this->currency->save();
-        $this->symbol->save();
+
+        DB::table('currencies')
+            ->where('id', $this->identifier)
+            ->update(['currency'=>$this-> currency,
+            'symbol' => $this->symbol
+        ]);
+
+        //$this->object->save();
         $this->reset(['open_edit']);
 
         $this->emitTo('currencies.index','render');

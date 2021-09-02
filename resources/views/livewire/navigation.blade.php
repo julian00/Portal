@@ -118,6 +118,9 @@
                     <a href="{{ route('cities.index') }}">Ciudades</a>
                 </li>
                 <li>
+                    <a href="{{ route('currencies.index') }}">Monedas</a>
+                </li>
+                <li>
                     <a href="{{ route('operations.index') }}">Operaciones</a>
                 </li>
                 <li>
