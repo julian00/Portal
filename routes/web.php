@@ -3,12 +3,15 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\CurrencyController;
 use App\Http\Livewire\Province\IndexComponent;
 use App\Http\Controllers\OperationController;
 use App\Http\Controllers\OrientationController;
 use App\Models\Currency;
 use App\Models\Operation;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -37,4 +40,8 @@ Route::resource('/orientations', OrientationController::class);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+//envio de mails
+Route::get('contactUs', [ContactUsController::class, 'index'])->name('contactUs.index');
+Route::post('contactUs',[ContactUsController::class, 'store'])->name('contactUs.store');
 
