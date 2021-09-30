@@ -130,6 +130,9 @@
                     <a href="{{ route('provinces.index') }}">Provincias</a>
                 </li>
                 <li>
+                    <a href="{{ route('ownershipTypes.index') }}">Tipos de Propiedad</a>
+                </li>
+                <li>
                     <a href="">Servicios</a>
                 </li>
                 <li>

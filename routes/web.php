@@ -8,6 +8,7 @@ use App\Http\Controllers\CurrencyController;
 use App\Http\Livewire\Province\IndexComponent;
 use App\Http\Controllers\OperationController;
 use App\Http\Controllers\OrientationController;
+use App\Http\Controllers\OwnershipTypeController;
 use App\Models\Currency;
 use App\Models\Operation;
 
@@ -34,6 +35,7 @@ Route::resource('/cities', CityController::class);
 Route::resource('/currencies', CurrencyController::class);
 Route::resource('/operations', OperationController::class);
 Route::resource('/orientations', OrientationController::class);
+Route::resource('/ownershiptypes',OwnershipTypeController::class);
 
 //Route::get('/provinces', IndexComponent::class);
 
