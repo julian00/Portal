@@ -12,6 +12,8 @@ class Index extends Component
 
     public $open_edit =false;
 
+    protected $listeners = ['render' => 'render'];
+
     protected $rules = [
         'currency' => 'required',
         'symbol' => 'required|max:3'
@@ -39,8 +41,6 @@ class Index extends Component
 
         $this->emitTo('currencies.index','render');
     }
-
-    protected $listeners = ['render' => 'render'];
 
     public function destroy(Currency $currency)
     {

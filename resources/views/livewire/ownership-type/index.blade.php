@@ -2,7 +2,7 @@
     <div class="max-w-7x1 mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <x-table>
             <div class="px-6 py-4 flex items-center">
-                @livewire('ownershipType.create')
+                @livewire('ownership-type.create')
             </div>
 
             {{--muestro los datos--}}
@@ -19,7 +19,7 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                        @foreach (ownershipTypes as $item)
+                        @foreach ($ownershipTypes as $item)
                             <tr>
                                 <td class=px-6 ý-4>
                                     <div class="text-m text-gray-900">{{$item->type}}</div>
@@ -49,15 +49,15 @@
     </div>
 
     {{--modal edit--}}
-    <x-jet-dialog-modal wire:modal="open_edit">
+    <x-jet-dialog-modal wire:model="open_edit">
         <x-slot name='title'>
             EDITAR
         </x-slot>
 
         <x-slot name='content'>
             <div class="mb-4">
-                <x-jet-label value="Tipo"/>
-                <x-jet-input wire:model="type" type="text" class="w-full"></x-jet-input>
+                <x-jet-label value="Tipo de propiedad"/>
+                <x-jet-input wire:model="type" type="text" class="w-full" />
             </div>
         </x-slot>
 

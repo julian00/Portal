@@ -26,7 +26,7 @@ class Index extends Component
         $this->orientation->save();
         $this->reset(['open_edit']);
 
-        $this->emitTo('orientations','render');
+        $this->emitTo('orientations.index','render');
     }
 
     protected $listeners = ['render' => 'render'];

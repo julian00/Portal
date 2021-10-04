@@ -8,7 +8,7 @@ use App\Models\OwnershipTypes;
 
 class Index extends Component
 {
-    public $type;
+    public $type , $identifier;
     public $open_edit = false;
 
     protected $rules = [
@@ -18,6 +18,7 @@ class Index extends Component
 
     public function edit(OwnershipTypes $request)
     {
+        $this->identifier = $request->id;
         $this->type = $request->type;
         $this->open_edit=true;
     }
@@ -25,9 +26,15 @@ class Index extends Component
     public function update()
     {
         $this->validate();
-        $this->type->save();
+
+        DB::table('ownership_types')
+            ->where('id', $this->identifier)
+            ->update(['type'=>$this-> type
+        ]);
+        //$this->save->type();
 
         $this->reset(['open_edit']);
+        //ownershiptypes
         $this->emitTo('ownershipType.index','render');
     }
 
@@ -39,6 +46,6 @@ class Index extends Component
     public function render()
     {
         $ownershipTypes= OwnershipTypes::all();
-        return view('livewire.ownership-type.index');
+        return view('livewire.ownership-type.index',compact('ownershipTypes'));
     }
 }

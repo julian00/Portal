@@ -9,5 +9,5 @@ class OwnershipTypes extends Model
 {
     use HasFactory;
     public $timestamps=false;
-    //protected $fillable=['operation'];
+    protected $fillable=['type'];
 }

@@ -10,6 +10,6 @@ class OwnershipTypeController extends Controller
     public function index()
     {
         $ownershipTypes = OwnershipTypes::paginate();
-        return view('ownershipType.index', compact('ownershipTypes'));
+        return view('ownershipTypes.index', compact('ownershipTypes'));
     }
 }
