@@ -9,5 +9,12 @@ class Ownership extends Model
 {
     use HasFactory;
     public $timestamps=false;
-    //protected $fillable=['operation'];
+    
+    protected $guarded = ['id'];
+
+    //relacion 1:M polimorfica
+    public function images()
+    {
+        return $this->morphMany(Image::class, "imageable");
+    }
 }

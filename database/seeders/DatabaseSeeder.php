@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         //crear la carpeta para guardar las imagenes
         //Storage::makeDirectory('products');
 
+        $this->call(UserSeeder::class);
         $this->call(provinceTableSeeder::class);
         $this->call(cityTableSeeder::class);
         $this->call(neighborhoodTableSeeder::class);
