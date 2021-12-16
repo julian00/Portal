@@ -10,4 +10,10 @@ class Currency extends Model
     use HasFactory;
     public $timestamps=false;
     protected $fillable=['currency','symbol'];
+
+   //relacion 1:M
+   public function ownership()
+   {
+       return $this->hasMany(Ownership::class);
+   }
 }

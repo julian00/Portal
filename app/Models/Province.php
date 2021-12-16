@@ -11,8 +11,10 @@ class Province extends Model
     public $timestamps=false;
     protected $fillable=['province'];
 
-    public function cities()
-    {
-        return $this->hasMany('App\Models\Province','id_province','id');
-    }
+     //creo la relacion 1:M
+     public function cities()
+     {
+         return $this->hasMany(City::class);
+     }
+
 }

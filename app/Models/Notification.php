@@ -9,5 +9,16 @@ class Notification extends Model
 {
     use HasFactory;
     public $timestamps=false;
-    //protected $fillable=['operation'];
+    protected $fillable=['message','id_user'];
+
+    //relacion 1:M inversa
+    public function ownership()
+    {
+        return $this->belongsTo(Ownership::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

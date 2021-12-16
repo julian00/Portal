@@ -9,5 +9,11 @@ class Messsage extends Model
 {
     use HasFactory;
     public $timestamps=false;
-    //protected $fillable=['operation'];
+    protected $fillable=['messages', 'id_user'];
+
+    //relacion 1:M inversa
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

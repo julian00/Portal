@@ -10,4 +10,10 @@ class Operation extends Model
     use HasFactory;
     public $timestamps=false;
     protected $fillable=['operation'];
+
+   //relacion 1:M
+   public function ownership()
+   {
+       return $this->hasMany(Ownership::class);
+   }
 }

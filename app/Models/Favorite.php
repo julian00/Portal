@@ -9,5 +9,16 @@ class Favorite extends Model
 {
     use HasFactory;
     public $timestamps=false;
-    //protected $fillable=['operation'];
+    protected $fillable=['id_ownership','id_user'];
+
+    //relacion 1:M inversa
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    } 
+
+    public function ownerships()
+    {
+        return $this->belongsTo(Ownership::class);
+    }
 }

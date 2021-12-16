@@ -11,8 +11,17 @@ class City extends Model
     public $timestamps=false;
     protected $fillable=['city','id_province'];
 
+    //relacion 1:M inversa
     public function province()
     {
-        return $this->belongsTo('App\Models\City','id_province','id');
+        return $this->belongsTo(City::class);
+    }
+    
+    //1:M
+    public function neighborhood()
+    {
+        return $this->hasMany(Neighborhood::class);
     }
 }
+
+

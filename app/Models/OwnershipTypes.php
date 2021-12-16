@@ -10,4 +10,10 @@ class OwnershipTypes extends Model
     use HasFactory;
     public $timestamps=false;
     protected $fillable=['type'];
+
+    //relacion 1:M
+   public function ownership()
+   {
+       return $this->hasMany(Ownership::class);
+   }
 }

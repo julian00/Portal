@@ -9,5 +9,11 @@ class DeedsDetails extends Model
 {
     use HasFactory;
     public $timestamps=false;
-    //protected $fillable=['operation'];
+    protected $fillable=['detail','id_propiedad'];
+
+    //relacion 1:1
+   public function ownership()
+   {
+       return $this->hasOne(Ownership::class);
+   }
 }

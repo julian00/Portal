@@ -9,5 +9,11 @@ class Service extends Model
 {
     use HasFactory;
     public $timestamps=false;
-    //protected $fillable=['operation'];
+    protected $fillable=['service'];
+
+    //relacion 1:M
+   public function ownerService()
+   {
+       return $this->belongsToMany(Ownership::class);
+   }
 }

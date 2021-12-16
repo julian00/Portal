@@ -28,7 +28,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'surname'
     ];
 
     /**
@@ -64,4 +64,26 @@ class User extends Authenticatable
     protected $attributes =[
         'id_user_type' => 3,
     ];
+
+    //1:M
+    public function notifications()
+    {
+        return $this->hasMany(Notification::class);
+    }
+
+    public function messages()
+    {
+        return $this->hasMany(Messsage::class);
+    }
+
+    public function ownerships()
+    {
+        return $this->hasMany(Ownership::class);
+    }
+
+    public function favorites()
+    {
+        return $this->belongsToMany(Ownership::class);
+    }
+
 }
