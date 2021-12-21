@@ -10,7 +10,7 @@
 
         <x-slot name='content'>
             <div class="mb-4">
-                <x-jet-label value="province"/>
+                <x-jet-label value="provincia"/>
                 <x-jet-input type="text" class="w-full" wire:model.defer="province"/>
                 <x-jet-input-error for="province"/>
             </div>

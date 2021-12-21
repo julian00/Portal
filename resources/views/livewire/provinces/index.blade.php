@@ -56,7 +56,7 @@
         
         <x-slot name='content'>
             <div class="mb-4">
-                <x-jet-label value="Province"/>
+                <x-jet-label value="Provincia"/>
                 <x-jet-input wire:model="province.province" type="text" class="w-full" />
             </div>
         </x-slot>

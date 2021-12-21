@@ -56,9 +56,9 @@
          
          <x-slot name='content'>
              <div class="mb-4">
-                 <x-jet-label value="City"/>
+                 <x-jet-label value="Ciudad"/>
                  <x-jet-input wire:model="city.city" type="text" class="w-full mb-4" />
-                 <x-jet-label value="Id_province"/>
+                 <x-jet-label value="Id_provincia"/>
 
                  <select name="province" id="province">
                     @foreach ($provinces as $province)

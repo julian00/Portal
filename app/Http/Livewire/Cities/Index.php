@@ -13,7 +13,7 @@ class Index extends Component
     public $open_edit = false;
 
     protected $rules =[
-        'cities.city' => 'required',
+        'city.city' => 'required',
         'id_province' => 'required'
     ];
 
