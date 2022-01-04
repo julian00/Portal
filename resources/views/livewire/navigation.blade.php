@@ -127,13 +127,13 @@
                     <a href="{{ route('orientations.index') }}">Orientaciones</a>
                 </li>
                 <li>
-                    <a href="{{ route('provinces.index') }}">Provincias</a>
-                </li>
-                <li>
                     <a href="{{ route('ownershiptypes.index') }}">Tipos de Propiedad</a>
                 </li>
                 <li>
-                    <a href="">Servicios</a>
+                    <a href="{{ route('provinces.index') }}">Provincias</a>
+                </li>
+                <li>
+                    <a href="{{ route('services.index') }}">Servicios</a>
                 </li>
                 <li>
                     <a href="">Contactenos</a>
