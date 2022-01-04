@@ -37,3 +37,56 @@
 {
     @apply bg-green-500;
 }
+button:focus
+{
+    @apply outline-none;
+}
+
+.button-add
+{
+    @apply bg-green-500;
+    @apply m-5;
+    @apply rounded-full;
+}
+
+.button-add:hover{
+    @apply bg-green-700;
+}
+
+.button-cancel
+{
+    @apply bg-red-500;
+    @apply m-5;
+    @apply text-center;
+    @apply rounded-full;
+}
+
+.button-cancel:hover
+{
+    @apply bg-red-600;
+}
+
+.button-delete
+{
+    @apply bg-red-500;
+}
+
+.button-delete:hover
+{
+    @apply bg-red-600;
+}
+
+.button-edit
+{
+    @apply bg-blue-500;
+    @apply font-bold;
+    @apply text-white;
+    @apply py-2;
+    @apply px-4;
+    @apply rounded;
+    @apply cursor-pointer;
+}
+
+.button-edit:hover{
+    @apply bg-blue-700;
+}

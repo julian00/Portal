@@ -9,7 +9,8 @@ use Livewire\Component;
 class Create extends Component
 {
     public $open = false;
-    public $city, $id_province;
+    public $city;
+    public $id_province=0;
     public $provinces;
 
     protected $rules =[

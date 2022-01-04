@@ -1,10 +1,10 @@
 <div>
     <div class="max-w-7x1 mx-auto px-4 sm:px-6 lg_px-8 py-12">
-        <x-table>
-            <div class="px-6 py-4 flex items-center">
-                @livewire('provinces.create')
-            </div>
+        <div class="px-6 py-4 flex items-center">
+            @livewire('provinces.create')
+        </div>
 
+        <x-table>
             {{--muestro los datos--}}
             @if ($provinces->count())
                 <table class="min-w-full">

@@ -1,11 +1,11 @@
 <div>
     <div class="max-w-7x1 mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {{--llamo al modal de create--}}
+        <div class="px-6 py-4 flex items-center">
+            @livewire('currencies.create')
+        </div>
+        
         <x-table>
-            {{--llamo al modal de create--}}
-            <div class="px-6 py-4 flex items-center">
-                @livewire('currencies.create')
-            </div>
-
             {{--muestro los datos--}}
             @if ($currencies->count())
                 <table class="min-w-full">

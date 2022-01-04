@@ -41,8 +41,8 @@ class Index extends Component
     }
 
     public function render()
-    {
-        $provinces = Province::all(); 
+    { 
+        $provinces = Province::all();
         $cities = City::all();
         //return view('livewire.cities.index');
         return view('livewire.cities.index',compact('cities','provinces'));// ['cities'=>City::all()]);

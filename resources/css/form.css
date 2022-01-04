@@ -1,0 +1,33 @@
+.form-label
+{
+    @apply text-gray-700;
+    @apply block;
+    @apply uppercase;
+    @apply m-4;
+}
+
+.form-control
+{
+    @apply bg-gray-200;
+}
+
+.form-control:focus
+{
+    @apply bg-white;
+}
+
+.form-input
+{
+    @apply block;
+    @apply w-full;
+    @apply bg-gray-200;
+    @apply px-4;
+    @apply py-3;
+    @apply text-gray-700;
+    @apply rounded;
+}
+
+.form-input:focus
+{
+    @apply bg-white;
+}

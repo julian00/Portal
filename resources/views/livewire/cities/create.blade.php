@@ -1,4 +1,4 @@
-<div>
+<div x-data>
     <x-jet-danger-button class="button-add" wire:click="$set('open',true)">
         Nueva Ciudad
     </x-jet-danger-button>
@@ -10,18 +10,17 @@
 
         <x-slot name='content'>
             <div class="mb-4">
-                <x-jet-label value="city"/>
-                <x-jet-input type="text" class="w-full" wire:model.defer="city"/>
-                <x-jet-input-error for="city"/>
-
-                <x-jet-label value="Id_province"/>
-                <select name="province" id="province">
-                    {{--mustra error en el foreach
-                    @foreach ($provinces as $province)
-                        <option value="{{ $province->id }}">{{ $province->province }}</option>
-                    @endforeach--}}
-                </select>
+                <div>
+                    <x-jet-label value="ciudad"/>
+                    <x-jet-input type="text" class="w-full" wire:model.defer="city"/>
+                    <x-jet-input-error for="city"/>
+                </div>
+                <div class="mt-4">
+                    @livewire('select-province')
+                    @ livewire('select-province', ['user' => $user], key($user->id))
+                </div>
             </div>
+            <p>hola{{$this->id_province}}</p>
         </x-slot>
 
         <x-slot name='footer'>

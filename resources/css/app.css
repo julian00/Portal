@@ -3,6 +3,7 @@
 @import 'tailwindcss/utilities';
 
 @import 'buttons.css';
+@import 'form.css';
 
 #navigation-menu
 {
@@ -27,94 +28,6 @@ a
     @apply mb-2;
     @apply py-2;
     @apply px-4;
-}
-
-button:focus
-{
-    @apply outline-none;
-}
-
-.button-add
-{
-    @apply bg-green-500;
-    @apply m-5;
-    @apply rounded-full;
-}
-
-.button-add:hover{
-    @apply bg-green-700;
-}
-
-.button-cancel
-{
-    @apply bg-red-500;
-    @apply m-5;
-    @apply text-center;
-    @apply rounded-full;
-}
-
-.button-cancel:hover
-{
-    @apply bg-red-600;
-}
-
-.button-delete
-{
-    @apply bg-red-500;
-}
-
-.button-delete:hover
-{
-    @apply bg-red-600;
-}
-
-.button-edit
-{
-    @apply bg-blue-500;
-    @apply font-bold;
-    @apply text-white;
-    @apply py-2;
-    @apply px-4;
-    @apply rounded;
-    @apply cursor-pointer;
-}
-
-.button-edit:hover{
-    @apply bg-blue-700;
-}
-
-.form-label
-{
-    @apply text-gray-700;
-    @apply block;
-    @apply uppercase;
-    @apply m-4;
-}
-
-.form-control
-{
-    @apply bg-gray-200;
-}
-
-.form-control:focus
-{
-    @apply bg-white;
-}
-
-.form-input
-{
-    @apply block;
-    @apply w-full;
-    @apply bg-gray-200;
-    @apply px-4;
-    @apply py-3;
-    @apply text-gray-700;
-    @apply rounded;
-}
-
-.form-input:focus
-{
-    @apply bg-white;
 }
 
 h1
