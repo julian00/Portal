@@ -10,12 +10,12 @@
 
         <x-slot name='content'>
             <div class="mb-4">
-                <x-jet-label value="currency"/>
+                <x-jet-label value="Moneda"/>
                 <x-jet-input type="text" class="w-full" wire:model.defer="currency"/>
                 <x-jet-input-error for="currency"/>
             </div>
             <div class="mb-4">
-                <x-jet-label value="symbol"/>
+                <x-jet-label value="symbolo"/>
                 <x-jet-input type="text" class="w-full" wire:model.defer="symbol"/>
                 <x-jet-input-error for="symbol"/>
             </div>
